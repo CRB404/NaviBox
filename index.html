@@ -45,9 +45,17 @@
         <p>I need your help to take me with you to <span style="font-family: HelveticaNeue; font-weight: 900; color: #ff3399;">Palo Alto</span> and leave me on the desk there.</p>
 
 
-        <img src="images/OnetoOther-01.png" alt="IDEO SF to IDEO PA" style="width:100%;height:auto;margin-top: 2%; margin-bottom: 10%;">
-
       </div>
+    </div>
+    <div class="row">
+      <img src="images/Buttons-03.png" alt="IDEO SF to IDEO PA" style="width:32%;height:auto;margin-top: 2%;">
+      <img src="images/Buttons-04.png" alt="IDEO SF to IDEO PA" style="width:32%;height:auto;margin-top: 2%;">
+      <img src="images/Buttons-05.png" alt="IDEO SF to IDEO PA" style="width:32%;height:auto;margin-top: 2%;">
+    </div>
+    <div class="row">
+      <button onclick="writeTraffic()" style="width:32%;height:auto; margin-bottom: 10%;">Traffic</button>
+      <button onclick="writeAccident()" style="width:32%;height:auto; margin-bottom: 10%;">Accident</button>
+      <button onclick="writeDiversion()" style="width:32%;height:auto; margin-bottom: 10%;">Diversion</button>
     </div>
   </div>
 
@@ -57,7 +65,7 @@
 </body>
 <footer class="footer">
   <div class="container">
-    <p><a href="#" style="color: #fff;" class="finallink">I'll Take You!</a></p>
+    <p><a href="#" onclick="writePickUp()" style="color: #fff;" class="finallink">I'll Take You!</a></p>
   </div>
 </footer>
 <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
@@ -70,5 +78,9 @@
     storageBucket: "navibox-943f5.appspot.com",
   };
   firebase.initializeApp(config);
+
+  // Get a reference to the database service
+  var database = firebase.database();
 </script>
+<script src="app.js"></script>
 </html>
