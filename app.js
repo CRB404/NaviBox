@@ -20,12 +20,13 @@ function writeDiversion() {
 }
 
 function writePickUp() {
-  firebase.database().ref('PickUp/').transaction(function(value) {
+  firebase.database().ref('PickUp/Number').transaction(function(value) {
     console.log('value', value);
+
+    var sessionsRef = firebase.database().ref('PickUp/Time');
+    var mySessionRef = sessionsRef.push();
+    mySessionRef.update({ startedAt: firebase.database.ServerValue.TIMESTAMP });
+
     return value + 1;
-  });
-  fb.ref("/.info/serverTimeOffset").on('PickUp/Time', function(offset) {
-    var offsetVal = offset.val()||0;
-    var serverTime = Date.now() + offsetVal;
   });
 }
