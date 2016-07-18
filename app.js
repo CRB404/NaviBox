@@ -39,6 +39,7 @@ function writeDropOf() {
     var mySessionRef = sessionsRef.push();
     mySessionRef.update({ startedAt: firebase.database.ServerValue.TIMESTAMP });
 
+
     return value + 1;
   });
 }
