@@ -44,7 +44,6 @@
 
         <h4>I need your help to get to <span style="font-family: HelveticaNeue; font-weight: 900; color: #ff3399;">Palo Alto</span> and drop me on the desk there.</h4>
 
-
         <img src="images/OnetoOther-01.png" alt="IDEO SF to IDEO PA" style="width:100%;height:auto;margin-top: 2%; margin-bottom: 10%;">
 
       </div>
@@ -57,7 +56,26 @@
 </body>
 <footer class="footer">
   <div class="container">
+<<<<<<< HEAD
     <p><a href="Accepted.html" style="color: #fff;" class="finallink">I'll Take You!</a></p>
+=======
+    <p><a href="NavMode.html" onclick="writePickUp()" style="color: #fff;" class="finallink">I'll Take You!</a></p>
+>>>>>>> firebase-app
   </div>
 </footer>
+<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBdOs3yZl6JrFg3oUDspPAlbA-BPNvQvfA",
+    authDomain: "navibox-943f5.firebaseapp.com",
+    databaseURL: "https://navibox-943f5.firebaseio.com",
+    storageBucket: "navibox-943f5.appspot.com",
+  };
+  firebase.initializeApp(config);
+
+  // Get a reference to the database service
+  var database = firebase.database();
+</script>
+<script src="app.js"></script>
 </html>
