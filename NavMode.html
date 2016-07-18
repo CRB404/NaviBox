@@ -34,19 +34,33 @@
   <div class="container">
     <div class="row">
       <div class="one-half column" style="margin-top: 10%">
-        <h4>Hello! My name's <span style="font-family: HelveticaNeue; font-weight: 900;">Boxy</span></h4>
+        <h4>Lets get <span style="font-family: HelveticaNeue; font-weight: 900;">going!</span></h4>
 
         <hr>
 
-        <p>I am an autonomous box that moves around between IDEO SF and IDEO PA delivering goods to people. </p>
+        <iframe
+          width="340"
+          height="450"
+          frameborder="0" style="border:0; margin-bottom: 8%;"
+          src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAS_EkWaQG2Yf6hp73tFDY-p3zs_tMtW_0&origin=IDEO,+San+Francisco,+CA&destination=IDEO,+Forest+Avenue,+Palo+Alto,+CA" allowfullscreen>
+        </iframe>
 
         <hr>
 
-        <p>I need your help to take me with you to <span style="font-family: HelveticaNeue; font-weight: 900; color: #ff3399;">Palo Alto</span> and leave me on the desk there.</p>
+        <p>Let me know if we run into any problems on our way to <span style="font-family: HelveticaNeue; font-weight: 900; color: #ff3399;">Palo Alto</span>. If you stop for coffee, could you let me know by pressing the diversion button.</p>
 
-        <img src="images/OnetoOther-01.png" alt="IDEO SF to IDEO PA" style="width:100%;height:auto;margin-top: 2%; margin-bottom: 10%;">
 
       </div>
+    </div>
+    <div class="row">
+      <img src="images/Buttons-03.png" alt="IDEO SF to IDEO PA" style="width:32%;height:auto;margin-top: 2%;">
+      <img src="images/Buttons-04.png" alt="IDEO SF to IDEO PA" style="width:32%;height:auto;margin-top: 2%;">
+      <img src="images/Buttons-05.png" alt="IDEO SF to IDEO PA" style="width:32%;height:auto;margin-top: 2%;">
+    </div>
+    <div class="row">
+      <button onclick="writeTraffic()" style="width:32%;height:auto; margin-bottom: 10%;">Traffic</button>
+      <button onclick="writeAccident()" style="width:32%;height:auto; margin-bottom: 10%;">Accident</button>
+      <button onclick="writeDiversion()" style="width:32%;height:auto; margin-bottom: 10%;">Diversion</button>
     </div>
   </div>
 
@@ -56,7 +70,9 @@
 </body>
 <footer class="footer">
   <div class="container">
-    <p><a href="NavMode.html" onclick="writePickUp()" style="color: #fff;" class="finallink">I'll Take You!</a></p>
+    <p><a href="arrived.html" style="color: #fff;" class="finallink">We Made It!</a></p>
+
+    <!-- <p><a href="arrived.html" onclick="writePickUp()" style="color: #fff;" class="finallink">We Made It!</a></p> -->
   </div>
 </footer>
 <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
