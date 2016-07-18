@@ -163,8 +163,21 @@ a:hover {
   color: #0FA0CE; }
 
 
+.button {
+
+    background-color: #ff3399;
+
+}
+
+.button:after {
+    background: #f1f1f1;
+}
+
+
+
+
 /* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+––––––––––––––––––––––––––––––––––––––––––––––––––
 .button,
 button,
 input[type="submit"],
@@ -222,7 +235,7 @@ input[type="button"].button-primary:focus {
   background-color: #1EAEDB;
   border-color: #1EAEDB; }
 
-
+*/
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 input[type="email"],

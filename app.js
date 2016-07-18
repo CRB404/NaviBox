@@ -23,8 +23,8 @@ function writeDropOff() {
   firebase.database().ref('DropOff/Number').transaction(function(value) {
     console.log('value', value);
 
-    var sessionsRef = firebase.database().ref('DropOff/Time');
-    var mySessionRef = sessionsRef.push();
+    var endsessionsRef = firebase.database().ref('DropOff/Time');
+    var myEndSessionRef = sessionsRef.push();
     mySessionRef.update({ startedAt: firebase.database.ServerValue.TIMESTAMP });
 
     return value + 1;
