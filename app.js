@@ -31,7 +31,6 @@ function writePickUp() {
   });
 }
 
-
 function writeDropOff() {
   firebase.database().ref('DropOff/Number').transaction(function(value) {
     console.log('value', value);
