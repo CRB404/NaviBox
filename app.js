@@ -19,11 +19,11 @@ function writeDiversion() {
   });
 }
 
-function writePickUp() {
-  firebase.database().ref('PickUp/Number').transaction(function(value) {
+function writeDropOff() {
+  firebase.database().ref('DropOff/Number').transaction(function(value) {
     console.log('value', value);
 
-    var sessionsRef = firebase.database().ref('PickUp/Time');
+    var sessionsRef = firebase.database().ref('DropOff/Time');
     var mySessionRef = sessionsRef.push();
     mySessionRef.update({ startedAt: firebase.database.ServerValue.TIMESTAMP });
 
@@ -31,11 +31,12 @@ function writePickUp() {
   });
 }
 
-function writeDropOff() {
-  firebase.database().ref('DropOff/Number').transaction(function(value) {
+
+function writePickUp() {
+  firebase.database().ref('PickUp/Number').transaction(function(value) {
     console.log('value', value);
 
-    var sessionsRef = firebase.database().ref('DropOff/Time');
+    var sessionsRef = firebase.database().ref('PickUp/Time');
     var mySessionRef = sessionsRef.push();
     mySessionRef.update({ startedAt: firebase.database.ServerValue.TIMESTAMP });
 
