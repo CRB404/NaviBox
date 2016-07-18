@@ -32,7 +32,7 @@ function writePickUp() {
 }
 
 
-function writeDropOf() {
+function writeDropOff() {
   firebase.database().ref('DropOff/Number').transaction(function(value) {
     console.log('value', value);
 
