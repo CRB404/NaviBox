@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>NaviBox</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 10%">
+        <h4>Welcome to <span style="font-family: HelveticaNeue; font-weight: 900;">NaviBox</span></h4>
+
+        <hr>
+
+        <p>NaviBox is a prototype micro controller that can take your box anywhere in the city for you.</p>
+
+        <hr>
+
+        <p>Just input your destination address and phone number and NaviBox will call a courier. There is a flat rate of <span style="font-family: HelveticaNeue; font-weight: 900; color: #ff3399;">$10</span> and you can pay the courier through <a href="https://cash.me/$AdamLukasik">Square Cash<a/>.</p>
+
+        <form action="action_page.php">
+          Destination<br>
+          <input type="text" name="firstname" value="Destination"><br>
+          Phone Number<br>
+          <input type="text" name="lastname" value="Phone Number"><br>
+          <input type="submit" value="Submit">
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<footer class="footer" style="">
+  <div class="container">
+    <p><a href="NavMode.html" onclick="writePickUp()" style="color: #fff;" class="finallink">My box is ready!</a></p>
+  </div>
+</footer>
+<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBdOs3yZl6JrFg3oUDspPAlbA-BPNvQvfA",
+    authDomain: "navibox-943f5.firebaseapp.com",
+    databaseURL: "https://navibox-943f5.firebaseio.com",
+    storageBucket: "navibox-943f5.appspot.com",
+  };
+  firebase.initializeApp(config);
+
+  // Get a reference to the database service
+  var database = firebase.database();
+</script>
+<script src="app.js"></script>
+</html>
